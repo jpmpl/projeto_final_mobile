@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Button from "@/components/Button";
 import { GestureHandlerRootView, ScrollView, TextInput } from "react-native-gesture-handler";
 import React from "react";
+import { TextInputMask } from 'react-native-masked-text';
 
 let restaurants: string[];
         
@@ -17,9 +18,10 @@ export default function RegisterRestaurantViewer() {
     const [latitude, setLatitude] = React.useState('');
     const [longitude, setLongitude] = React.useState('');
     const [isRestaurant, setIsRestaurant] = React.useState(true);
+    const [cnpj, setCnpj] = React.useState('');
     
     const handleRegistration = async () => {
-        if (!name || !address || !addressnumber || !zipcode || !state || !neighboorhood || !city || !latitude || !longitude) {
+        if (!name || !address || !addressnumber || !zipcode || !state || !neighboorhood || !city || !latitude || !longitude || !cnpj) {
             Alert.alert('Error', 'Please fill in all fields');
             return;
         }
@@ -45,7 +47,7 @@ export default function RegisterRestaurantViewer() {
 
             // Save data to AsyncStorage
             await AsyncStorage.setItem(`restaurant@${name}`, 
-                JSON.stringify({ name, address, addressnumber, zipcode, neighboorhood, city, state, latitude, longitude, isRestaurant }));
+                JSON.stringify({ name, address, addressnumber, zipcode, neighboorhood, city, state, latitude, longitude, cnpj, isRestaurant }));
             Alert.alert('Success', 'Registration successful!');
 
             // Clear the input fields
@@ -58,6 +60,7 @@ export default function RegisterRestaurantViewer() {
             setState('');
             setLatitude('');
             setLongitude('');
+            setCnpj('');
             setIsRestaurant(true);
 
         } catch (error) {
@@ -130,6 +133,18 @@ export default function RegisterRestaurantViewer() {
                     onChangeText={newText => setLongitude(newText)}
                     value={longitude}
                     keyboardType="numeric"
+                />
+                <TextInputMask
+                    type={'cnpj'}
+                    value={cnpj}
+                    onChangeText={text => setCnpj(text)}
+                    placeholder="00.000.000/0000-00"
+                    style={{
+                    borderWidth: 1,
+                    borderColor: '#ccc',
+                    padding: 10,
+                    borderRadius: 5,
+                    }}
                 />
                 </ScrollView>
                 <Button 
