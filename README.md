@@ -48,7 +48,8 @@ Este é um projeto desenvolvido como parte do **Trabalho Prático da     discipl
 
 📺 Assista ao vídeo de apresentação do app pelo link abaixo:
 
-🔗 [Link para o vídeo no YouTube](https://youtube.com/seu-video-aqui)  
+🔗 [Link para o vídeo no YouTube](https://youtu.be/NW_bwFsssGc)  
+LINK: https://youtu.be/NW_bwFsssGc
 *(ou adicione o arquivo de vídeo na pasta do projeto)*
 
 ## 🔗 Repositório
