@@ -58,7 +58,7 @@ Este repositório contém todo o código-fonte do projeto, bem como os    recurs
 
 ---
 
-**Aluno:** [Seu Nome Aqui]  
-**Curso:** [Nome do Curso]  
+**Aluno:** Joao Paulo Miranda de Paula Lana  
+**Curso:** [IEC_ASD_O8_T1_Online] Arquitetura para Aplicações Móveis
 **Professor:** Fernando Pereira  
 **Entrega Individual - Trabalho Prático: App Mobile - Cardápio de Restaurante**
