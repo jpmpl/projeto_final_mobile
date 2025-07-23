@@ -19,10 +19,10 @@ export default function RegisterRestaurantViewer() {
     const [isRestaurant, setIsRestaurant] = React.useState(true);
     
     const handleRegistration = async () => {
-        //if (!name || !address || !addressnumber || !zipcode || !state || !neighboorhood || !city || !latitude || !longitude) {
-        //    Alert.alert('Error', 'Please fill in all fields');
-        //    return;
-        //}
+        if (!name || !address || !addressnumber || !zipcode || !state || !neighboorhood || !city || !latitude || !longitude) {
+            Alert.alert('Error', 'Please fill in all fields');
+            return;
+        }
 
         // TODO: Add validation for fields
 
